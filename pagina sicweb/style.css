@@ -1,0 +1,123 @@
+:root{
+  --ink:#0d1420;
+  --ink-soft:#4a5568;
+  --paper:#f6f8fc;
+  --paper-raised:#ffffff;
+  --line:#dfe5ef;
+  --blue:#2f6fed;
+  --blue-deep:#0b3fae;
+  --blue-bright:#3aa0ff;
+  --mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:"Inter",system-ui,-apple-system,Segoe UI,sans-serif;
+  line-height:1.55;
+}
+h1,h2,h3,.wordmark{
+  font-family:"Space Grotesk","Inter",sans-serif;
+  letter-spacing:-0.01em;
+  margin:0;
+}
+a{color:inherit;}
+img{max-width:100%;display:block;}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px;}
+
+/* header */
+.site-header{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:22px 0;
+}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink);}
+.brand img{width:38px;height:38px;}
+.brand span{font-weight:600;font-size:1.05rem;}
+.site-header nav a{
+  margin-left:28px;text-decoration:none;color:var(--ink-soft);font-size:0.95rem;
+}
+.site-header nav a:hover{color:var(--ink);}
+
+/* hero */
+.hero{padding:64px 0 56px;}
+.hero .tag{
+  font-family:var(--mono);font-size:0.82rem;color:var(--blue-deep);
+  background:#e7edfd;display:inline-block;padding:5px 12px;border-radius:5px;
+  margin-bottom:22px;
+}
+.hero h1{
+  font-size:clamp(2.3rem,5vw,3.4rem);
+  max-width:15ch;
+  color:var(--ink);
+}
+.hero h1 em{
+  font-style:normal;
+  background:linear-gradient(100deg,var(--blue-bright),var(--blue-deep));
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.hero p{max-width:52ch;color:var(--ink-soft);font-size:1.08rem;margin-top:18px;}
+.hero .cta-row{margin-top:30px;display:flex;gap:14px;flex-wrap:wrap;}
+.btn{
+  display:inline-block;padding:12px 22px;border-radius:8px;text-decoration:none;
+  font-weight:600;font-size:0.96rem;border:1px solid transparent;
+}
+.btn.primary{background:var(--ink);color:#fff;}
+.btn.primary:hover{background:var(--blue-deep);}
+.btn.ghost{border-color:var(--line);color:var(--ink);}
+.btn.ghost:hover{border-color:var(--ink);}
+
+/* sections */
+section{padding:52px 0;border-top:1px solid var(--line);}
+.section-head{margin-bottom:32px;max-width:56ch;}
+.section-head h2{font-size:1.7rem;}
+.section-head p{color:var(--ink-soft);margin-top:10px;}
+
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;}
+.service{
+  background:var(--paper-raised);border:1px solid var(--line);border-radius:10px;
+  padding:24px;
+}
+.service .k{font-family:var(--mono);font-size:0.78rem;color:var(--blue-deep);}
+.service h3{font-size:1.12rem;margin-top:10px;}
+.service p{color:var(--ink-soft);font-size:0.95rem;margin-top:8px;}
+
+.apps{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+.app-card{
+  border:1px solid var(--line);border-radius:10px;padding:24px;background:var(--paper-raised);
+  display:flex;flex-direction:column;gap:10px;
+}
+.app-card .status{
+  font-family:var(--mono);font-size:0.75rem;color:var(--ink-soft);
+}
+.app-card h3{font-size:1.2rem;}
+.app-card p{color:var(--ink-soft);font-size:0.95rem;}
+
+.contact-box{
+  background:var(--ink);color:#fff;border-radius:14px;padding:40px;
+  display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:20px;
+}
+.contact-box h2{color:#fff;font-size:1.5rem;max-width:20ch;}
+.contact-box .btn.primary{background:var(--blue-bright);color:var(--ink);}
+.contact-box .btn.primary:hover{background:#fff;}
+
+footer{padding:30px 0 50px;color:var(--ink-soft);font-size:0.88rem;}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;}
+footer a{text-decoration:underline;}
+
+/* privacy page */
+.legal{padding:56px 0 80px;}
+.legal h1{font-size:2rem;margin-bottom:6px;}
+.legal .updated{color:var(--ink-soft);font-family:var(--mono);font-size:0.85rem;margin-bottom:36px;}
+.legal h2{font-size:1.2rem;margin-top:34px;margin-bottom:10px;}
+.legal p, .legal li{color:var(--ink-soft);font-size:1rem;}
+.legal ul{padding-left:20px;}
+.legal a{color:var(--blue-deep);}
+
+@media (max-width:760px){
+  .services{grid-template-columns:1fr;}
+  .apps{grid-template-columns:1fr;}
+  .site-header nav a{margin-left:16px;font-size:0.88rem;}
+}
